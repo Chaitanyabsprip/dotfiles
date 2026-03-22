@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {},
+  "mcp": {
+    "sse-read-prod": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mongodb-mcp-server@latest",
+        "--readOnly",
+        "--connectionString",
+        "mongodb+srv://readsseprod:Aue8xGl1wlp2qHa7@sse.fmvaugo.mongodb.net/cmsDb-solarsquare_prod_v1"
+      ]
+    },
+    "confluence": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "oauth": {}
+    }
+  }
+}
